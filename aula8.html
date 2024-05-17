@@ -1,0 +1,20 @@
+<!DOCTYPE html> <html> <head> <title>Aula de Circuitos Digitais e Introdução a C++/C#</title> </head> <body> <h1>Aula de Circuitos Digitais e Introdução a C++/C#</h1> <h2>Momento Um: Circuitos das Portas Lógicas</h2> <p>No primeiro momento da aula, construímos os circuitos das portas lógicas AND, OR e NOT, utilizando dois botões como entradas e um LED como saída. Testamos os circuitos de acordo com as tabelas verdade. Foram gerados 3 vídeos, um para cada porta lógica.</p> <h2>Momento Dois: Circuito com LDR e LED</h2> <p>No segundo momento, criamos um circuito com uma entrada (LDR) e uma saída (LED), com o Arduino processando o valor analógico. Foi gerado um vídeo demonstrando esse circuito.</p> <h3>Código de Exemplo</h3> <pre> /********* * Edusesc Taguatinga * * Professor: Wendell * * Nome: Wendell Cruzeiro * * Itinerário de robótica * * ********* */ // Declaração de Variáveis e Constantes
+const int LED = 13;
+int LDR = A0;
+// Configurações
+void setup() {
+pinMode(LED, OUTPUT);
+pinMode(LDR, INPUT);
+Serial.begin(9600);
+}
+// Repetições
+void loop() {
+int luz = analogRead(LDR);
+Serial.println(luz);
+if (luz > 500) {
+digitalWrite(LED, HIGH);
+}
+else {
+digitalWrite(LED, LOW);
+}
+</pre> <h2>Vídeos e Imagens dos Circuitos</h2> <img src="circuitos_portas_logicas.jpg" alt="Circuitos das Portas Lógicas"> <p>Vídeos dos circuitos das portas lógicas AND, OR e NOT.</p> <img src="circuito_LDR_LED.jpg" alt="Circuito com LDR e LED"> <p>Vídeo do circuito com LDR e LED, processado pelo Arduino.</p> <p>Esperamos que esta aula tenha sido esclarecedora e que tenha proporcionado uma compreensão mais profunda sobre circuitos digitais e programação em C++/C#. Explore os vídeos e imagens para reforçar o aprendizado!</p> </body> </html>
